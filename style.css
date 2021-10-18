@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+    height: 95vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+header h1{
+    width: 100px;
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+    font-weight: 200;
+    display: grid;
+    place-content: center;
+    margin-top: 70px;
+}
+b{
+    font-weight: 300;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+nav ul li{
+    list-style: none;
+    display: grid;
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: 'Quicksand', sans-serif;
+    place-content: center;
+    margin-top: 50px;
+}
+nav ul li:first-child{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+span{
+    position: absolute;
+    width: 90%;
+    border-top: 3px solid rgb(218, 69, 69);
+    left: 0;
+    top: 50%;
+}
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 80px;
+    margin-left: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(218, 69, 69);
+}
+.fa-bars,.fa-shopping-cart{
+    display: none;
+    color: rgb(218, 69, 69);
+    font-size: 1.2rem;
+}
+main{
+    height: 90vh;
+    margin-left: 100px;
+    display: grid;
+    place-content: center;
+}
+section{
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+.info-txt{
+    display: grid;
+    place-content: center;
+    width: 60%;
+    height: 240px;
+}
+.info-txt h1{
+    font-weight: 200;
+    font-size: 6rem;
+    font-family: 'Lobster', cursive;
+}
+.card-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+.card{
+    display: grid;
+    place-content: center;
+    width: 200px;
+    height: 250px;
+    margin-left: 30px;
+    border-radius: 20px;
+    background-color: rgb(255, 255 , 255);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+.card:first-child{
+    margin-left: 0px;
+}
+.card img{
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.card h2{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 20px;
+}
+.lorem-txt{
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    display: grid;
+    place-content: center;
+}
+.lorem-txt p{
+    text-align: start;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+.lorem-txt .underline{
+    width: 100px;
+    height: 3px;
+    margin-top: 20px;
+    background-color: rgb(218, 69, 69);
+}
+
+@media screen and (max-width:1500px){
+   header{
+       position: absolute;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       top: 0;
+       bottom: 100%;
+       width: 100%;
+       height: 10px;
+   }
+   header h1{
+       width: 150px;
+       display: flex;
+        font-size: 2rem;
+        font-family: 'Lobster', cursive;
+        font-weight: 200;
+}
+.fa-bars,.fa-shopping-cart{
+    display: grid;
+    cursor: pointer;
+    place-content: center;
+    margin-top: 70px;
+    font-size: 1.8rem;
+}
+.fa-shopping-cart{
+    margin-right: 30px;
+}
+nav{
+       display: none;
+   }
+b{
+    display: none;
+}
+button{
+    display: none;
+}  
+}
+
+@media screen and (max-width:1200px){
+    main{
+        width: 100%;
+        height: 90vh;
+        display: grid;
+        margin-left: 0px;
+        place-content: center;
+    }
+    section{
+        display: grid;
+        place-content: center;
+        padding: 20px;
+        padding-bottom: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .info-txt{
+        height: 100px;
+        width: 80%;
+        text-align: start;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+    .info-txt h1{
+        font-size: 2.5rem;
+    }
+    .lorem-txt{
+        bottom: 0;
+        top: 90%;
+        left: 0;
+        width: 80%;
+        margin-left: 40px;
+    }
+    .card-container{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin-top: 30px;
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .card{
+        width: 150px;
+        height: 200px;
+        margin-left: 0px;
+    }
+    .card img{
+        width: 100px;
+        height: 100px;
+    }
+    .card h2{
+        font-size: 1rem;
+    }
+    .card:last-child{
+        display: none;
+    }
+}
